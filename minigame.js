@@ -13,8 +13,8 @@ while (activePlayers.length !== 1) {
     while (bombswitchdetonated === false) {
         let currentplayer = activePlayers[0]
         let switchpicked = Math.floor(Math.random() * activeswitches.length)
-        console.log(`Player ${currentplayer} picked switch number ${switchpicked}.`)
-        if (switchpicked === bombswitch) {
+        console.log(`Player ${currentplayer} picked switch number ${activeswitches[switchpicked]}.`)
+        if (activeswitches[switchpicked] === bombswitch) {
             console.log(`Player ${currentplayer} detonated the bomb!`)
             activePlayers = activePlayers.filter(player => player !== currentplayer)
             bombswitchdetonated = true;
@@ -25,7 +25,7 @@ while (activePlayers.length !== 1) {
             activePlayers = activePlayers.filter(player => player !== currentplayer)
             activePlayers.push(currentplayer)
             //remove switch picked from active switches
-            activeswitches = activeswitches.filter(s => s !== switchpicked)
+            activeswitches = activeswitches.filter(s => s !== activeswitches[switchpicked])
             if (activeswitches.length === 1) {
                 bombswitchdetonated = true; //Not actually detonated, but used to reset the arena, since the only switch left would be the bombswitch. This allows the game to reset the active switch count;
                 console.log('The switches have been reset!')
