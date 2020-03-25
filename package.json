@@ -1,17 +1,18 @@
 {
   "name": "bowsersbigblastsimulator",
   "version": "1.0.0",
-  "description": "",
-  "main": "minigame.js",
+  "description": "A Mass Simulator of the Bowser's Big Blast minigame from the Mario Party series.",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andrewtyl/BowsersBigBlastSimulator.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Andrew Jessen-Tyler",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/andrewtyl/BowsersBigBlastSimulator/issues"
   },

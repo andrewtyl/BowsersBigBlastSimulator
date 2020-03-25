@@ -38,4 +38,4 @@ function simulate(x) {
     if (dev) { console.log(`Simulation took ${(end - start) / 1000} seconds to run.`) }
 }
 
-simulate(33000000);
+simulate(550000);
