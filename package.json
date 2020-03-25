@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/andrewtyl/BowsersBigBlastSimulator/issues"
   },
-  "homepage": "https://github.com/andrewtyl/BowsersBigBlastSimulator#readme"
+  "homepage": "https://github.com/andrewtyl/BowsersBigBlastSimulator#readme",
+  "devDependencies": {
+    "performance-now": "^2.1.0"
+  }
 }
