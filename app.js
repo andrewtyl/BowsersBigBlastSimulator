@@ -2,7 +2,7 @@
 const dev = false; //Turn on if you want to measure the amount of time it takes for the simulation to run.;
 
 const minigame = require("./minigame")
-if (dev) { const now = require('performance-now') }
+const now = require('performance-now')
 
 function simulate(x) {
     console.log('Program has started...please wait...')
@@ -10,7 +10,7 @@ function simulate(x) {
     let p2WinCount = 0;
     let p3WinCount = 0;
     let p4WinCount = 0;
-    if (dev) { const start = now() }
+    const start = now();
     for (let i = 0; i < x; i++) {
         let res = minigame()
         if (res === 1) {
@@ -29,7 +29,7 @@ function simulate(x) {
             throw new error("Something broke. The player that won wasn't even playing. This line of code should never execute.")
         }
     }
-    if (dev) { const end = now() }
+    const end = now()
     console.log(`The minigame was played a total of ${x} time(s).`)
     console.log(`Player 1 won ${p1WinCount} time(s). That's a ${((p1WinCount / x) * 100).toPrecision(4)}% winrate!`)
     console.log(`Player 2 won ${p2WinCount} time(s). That's a ${((p2WinCount / x) * 100).toPrecision(4)}% winrate!`)
